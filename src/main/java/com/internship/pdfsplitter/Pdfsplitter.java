@@ -32,6 +32,14 @@ public class Pdfsplitter {
 
         int totalPages = document.getNumberOfPages();
         int pagesPerPart = totalPages / numParts;
+        
+        for (int i = 0; i < numParts; i++) {
+            PDDocument partDocument = new PDDocument();
+            
+        }
+
+        document.close();
+
 
     }
 }
