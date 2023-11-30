@@ -27,8 +27,12 @@ public class Pdfsplitter {
         }
     }
     private static void splitPdf(String inputPdfPath, int numParts) throws IOException {
+       
         PDDocument document = PDDocument.load(new File(inputPdfPath));
-        
+
+        int totalPages = document.getNumberOfPages();
+        int pagesPerPart = totalPages / numParts;
+
     }
 }
 
