@@ -18,6 +18,17 @@ public class Pdfsplitter {
             System.out.println("Usage: java PdfSplitter <input_pdf_path> <num_parts>");
             return;
         }
+        
+        try {
+            splitPdf(inputPdfPath, numParts);
+            System.out.println("PDF split successfully!");
+        } catch (IOException e) {
+            System.err.println("Error while splitting PDF: " + e.getMessage());
+        }
+    }
+    private static void splitPdf(String inputPdfPath, int numParts) throws IOException {
+        PDDocument document = PDDocument.load(new File(inputPdfPath));
+        
     }
 }
 
